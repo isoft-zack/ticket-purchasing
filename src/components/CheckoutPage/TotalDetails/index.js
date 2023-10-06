@@ -47,7 +47,7 @@ const TotalDetails = ({ quantity, setMessage }) => {
   return (
     <>
       {/* Total Details Section */}
-      <div className="total_details_section total_bill_container sub_section_container">
+      <div className="total_details_container total_bill_container">
         <div className="final_total">
           <label className="header">Total</label>
           <label className="header">${finalTotal}</label>

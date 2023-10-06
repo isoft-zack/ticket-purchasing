@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import CardDetailsSection from "../CardDetailsSection";
+import BookingDetails from "./BookingDetails";
 import TotalDetails from "./TotalDetails";
 import { clearUserStatus, editCardDetails } from "../../data/userSlice";
 import Snackbar from "@mui/material/Snackbar";
@@ -18,7 +17,6 @@ const CheckoutPage = () => {
   const { deliveryFees } = useSelector((store) => store.bill.otherCharges);
   const cardDetailsUpdateStatus = useSelector((store) => store.user.status);
   const [quantity, setQuantity] = useState(showDetails.quantity);
-  const allowedBuyQuantity = [1, 2, 3, 4, 5, 7, 8, 9, 10];
   const [isCardDetailsEditable, setIsCardDetailsEditable] = useState(false);
   const [message, setMessage] = useState("");
   const dispatch = useDispatch();
@@ -36,10 +34,6 @@ const CheckoutPage = () => {
       setMessage("Card details have been successfully updated");
     }
   }, [cardDetailsUpdateStatus]);
-
-  const handleChange = (e) => {
-    setQuantity(e.target.value);
-  };
 
   const handleEditCardDetails = () => {
     setIsCardDetailsEditable(!isCardDetailsEditable);
@@ -64,39 +58,7 @@ const CheckoutPage = () => {
   return (
     <>
       <div className="checkout_container">
-        {/* Booking Details Section */}
-        <div className="sub_section_container">
-          <label className="header">Booking Details</label>
-          <div className="booked_show_details">
-            <div className="checkout_show_details">
-              <label className="sub_header">{showDetails.name}</label>
-              <label className="show_price">
-                Price per ticket: ${showDetails.perTicketPrice || "-"}
-              </label>
-              <label className="internal_details">
-                Will be held on: {showDetails.date || "-"}
-              </label>
-            </div>
-            <div className="qty_cta_container">
-              <label className="internal_details">Quantity</label>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={quantity}
-                label="Quantity"
-                onChange={handleChange}
-              >
-                {allowedBuyQuantity.map((item) => {
-                  return (
-                    <MenuItem key={item} value={item}>
-                      {item}
-                    </MenuItem>
-                  );
-                })}
-              </Select>
-            </div>
-          </div>
-        </div>
+        <BookingDetails quantity={quantity} setQuantity={setQuantity} />
         <div className="checkout_summary">
           <div className="miscelleneous_details">
             {/* Delivery Details Section */}
