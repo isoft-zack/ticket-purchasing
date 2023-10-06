@@ -1,15 +1,15 @@
-@import '../../../style/common/index.scss';
+@import "../../../style/common/index.scss";
 
 .delivery_details_container {
-    @extend %sub_section_container;
+  @extend %sub_section_container;
 
-    .checkIcon {
-        color: green;
-        margin-left: 5px;
-    }
+  .checkIcon {
+    color: green;
+    margin-left: 5px;
+  }
 
-    .delivery_info{
-        margin-top: 29px;
-        display: block;
-    }
+  .delivery_info {
+    margin-top: 29px;
+    display: block;
+  }
 }

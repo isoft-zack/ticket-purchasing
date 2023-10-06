@@ -8,25 +8,22 @@ const DeliveryDetails = () => {
   const { deliveryFees } = useSelector((store) => store.bill.otherCharges);
 
   return (
-    <>
-      {/* Delivery Details Section */}
-      <div className="delivery_details_container">
-        <label className="header">
-          Delivery <CheckCircleOutlineIcon className="checkIcon" />
-        </label>
-        <label className="sub_header">{`Mobile Entry - ${
-          deliveryFees || "Free"
-        }`}</label>
-        <label className="delivery_info internal_details">
-          <div>Tickets Available by {showDetails.date || "-"}</div>
-          <div>
-            These mobile tickets will be transferred directly to you from a
-            trusted seller. We'll email you instructions on how to accept them
-            on the original ticket provider's mobile app.
-          </div>
-        </label>
-      </div>
-    </>
+    <div className="delivery_details_container">
+      <label className="header">
+        Delivery <CheckCircleOutlineIcon className="checkIcon" />
+      </label>
+      <label className="sub_header">{`Mobile Entry - ${
+        deliveryFees || "Free"
+      }`}</label>
+      <label className="delivery_info internal_details">
+        <div>Tickets Available by {showDetails.date || "-"}</div>
+        <div>
+          These mobile tickets will be transferred directly to you from a
+          trusted seller. We'll email you instructions on how to accept them on
+          the original ticket provider's mobile app.
+        </div>
+      </label>
+    </div>
   );
 };
 
