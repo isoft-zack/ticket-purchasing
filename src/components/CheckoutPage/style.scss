@@ -21,11 +21,6 @@
             padding: 12px;
         }
 
-        .checkIcon {
-            color: green;
-            margin-left: 5px;
-        }
-
         .booked_show_details{
             display: flex;
             justify-content: space-between;
@@ -62,11 +57,6 @@
             &:hover{
                 cursor: pointer;
             }
-        }
-
-        .delivery_info{
-            margin-top: 29px;
-            display: block;
         }
     }
 

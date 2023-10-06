@@ -1,0 +1,61 @@
+@import "../../../style/common/index.scss";
+
+.card_details_container {
+  @extend %sub_section_container;
+
+  .checkIcon {
+    color: green;
+    margin-left: 5px;
+  }
+
+  .booked_show_details {
+    display: flex;
+    justify-content: space-between;
+    .checkout_show_details {
+      display: flex;
+      flex-direction: column;
+
+      .show_title {
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .show_price {
+        color: #342e2e;
+        font-size: 15px;
+
+        @media screen and (max-width: 601px) {
+          font-size: 13px;
+        }
+      }
+    }
+    .qty_cta_container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .edit_class_details {
+    background-color: #00479b;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .terms_label {
+    font-weight: 700;
+    color: #625d5d;
+
+    @media screen and (max-width: 601px) {
+      font-size: 13px;
+    }
+
+    .terms_of_use {
+      @extend %terms_of_use;
+    }
+  }
+}
