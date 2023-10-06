@@ -1,0 +1,62 @@
+@import "../../../style/common/index.scss";
+
+.total_details_container {
+  @extend %sub_section_container;
+
+  &.total_bill_container {
+    width: 50%;
+
+    @media screen and (max-width: 601px) {
+      width: unset;
+      padding: 12px;
+    }
+
+    .final_total {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .terms_container {
+      margin-top: 20px;
+      .terms_label {
+        font-weight: 700;
+        color: #625d5d;
+
+        @media screen and (max-width: 601px) {
+          font-size: 13px;
+        }
+
+        .terms_of_use {
+          @extend %terms_of_use;
+        }
+      }
+    }
+    .place_order_btn {
+      background-color: #069009;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      color: white;
+      font-weight: 700;
+      width: 100%;
+      height: 50px;
+      font-size: 19px;
+      margin-top: 20px;
+      &:hover {
+        cursor: pointer;
+      }
+      &:disabled {
+        opacity: 50%;
+        cursor: not-allowed;
+      }
+
+      @media screen and (max-width: 601px) {
+        font-size: 14px;
+        height: 30px;
+      }
+    }
+    .disclaimer {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }
+}

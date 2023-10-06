@@ -1,0 +1,115 @@
+.checkout_container{
+    height: 86%;
+    width: 90%;
+    justify-content: center;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    @media screen and (max-width: 601px) {
+        width: unset;
+    }
+
+    .sub_section_container{
+        border: 1px solid #b7b6b6;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 33px;
+
+        @media screen and (max-width: 601px) {
+            padding: 12px;
+        }
+
+        .booked_show_details{
+            display: flex;
+            justify-content: space-between;
+            .checkout_show_details{
+                display: flex;
+                flex-direction: column;
+    
+                .show_title{
+                    font-size: 17px;
+                    font-weight: 700;
+                }
+                .show_price{
+                    color: #342e2e;
+                    font-size: 15px;
+
+                    @media screen and (max-width: 601px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .qty_cta_container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .edit_class_details{
+            background-color: #00479b;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            color: white;
+            padding: 5px 20px;
+            margin-top: 10px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .header{
+        font-size: 22px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 601px) {
+            font-size:15px;
+        }
+
+    }
+    .sub_header{
+        margin: 28px 0px 7px 0px;
+        font-size: 17px;
+        font-weight: 700;
+        display: block;
+
+        @media screen and (max-width: 601px) {
+            font-size:14px;
+        }
+    }
+    .sub_summary{
+        display: flex;
+        justify-content: space-between;
+    }
+    .internal_details{
+        color: #625d5d;
+        font-size: 15px;
+        display: block;
+
+        @media screen and (max-width: 601px) {
+            font-size:13px;
+        }
+
+    }
+   
+    .checkout_summary{
+        display: flex;
+
+        @media screen and (max-width: 601px) {
+            flex-direction: column;
+        }
+        .miscelleneous_details{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @media screen and (max-width: 601px) {
+                width: 100%;
+            }
+        }
+    }
+}

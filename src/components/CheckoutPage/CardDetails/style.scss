@@ -1,0 +1,36 @@
+@import "../../../style/common/index.scss";
+
+.card_details_container {
+  @extend %sub_section_container;
+
+  .checkIcon {
+    color: green;
+    margin-left: 5px;
+  }
+
+  .add-card-container {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border-bottom: 1px solid #b7b6b6;
+    margin: 15px 0px;
+    padding: 10px 0px;
+
+    .addIcon {
+      color: #0f47d2;
+    }
+  }
+
+  .terms_label {
+    font-weight: 700;
+    color: #625d5d;
+
+    @media screen and (max-width: 601px) {
+      font-size: 13px;
+    }
+
+    .terms_of_use {
+      @extend %terms_of_use;
+    }
+  }
+}
